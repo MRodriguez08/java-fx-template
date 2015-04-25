@@ -1,0 +1,73 @@
+
+.layout-top {
+	-fx-background-color: #00FF3D;
+	-fx-padding: 8;
+	-fx-height: 50;
+	-fx-font-size: 30;
+}
+
+.layout-left {
+	-fx-padding: 15;
+}
+
+.side-menu-link {
+	-fx-font-size: 15;
+}
+
+.side-menu-link:hover {
+	-fx-font-size: 20;
+}
+
+.administration-title {
+	-fx-font-size: 20;	
+}
+
+.administration-pane-container .administration-title {	
+	-fx-background-color: #00FF3D;
+	-fx-border-width: 1px;
+	-fx-border-color: #000000;
+}
+
+.administration-pane-container {
+	-fx-padding: 20 20 10 20;
+	-fx-background-color: #DEDEDE;
+}
+
+.form {
+	-fx-padding: 20 20 20 20;
+}
+
+.form-title {
+	-fx-font-size: 20;	
+	-fx-background-color: #DEDEDE;
+}
+
+.has-error {
+	-fx-background-color: #FF4751;
+}
+
+.administration-filter-pane {
+	-fx-insets : 15;
+	-fx-spacing : 50
+}
+
+.administration-filter-button {
+
+}
+
+.create-button-panel {
+	-fx-vpos : right;
+}
+
+.form-tab {
+	-fx-spacing : 15;
+	-fx-padding: 20 0 20 0;
+}
+
+.form-tabbed-pane {
+	
+}
+
+.form-error-text {
+	-fx-padding: 10 0 10 0;
+}
