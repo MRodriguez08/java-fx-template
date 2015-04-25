@@ -1,13 +1,6 @@
-Gym Administration System
+java-fx-template
 ========================
 
+## Intro
 
-### Directory structure
-
-### Presentation layer
-
-### Business layer
-
-### Persistence layer
-
-### Backend processes
+## Tech stack
