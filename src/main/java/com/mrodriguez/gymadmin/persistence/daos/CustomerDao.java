@@ -18,8 +18,6 @@ import com.mrodriguez.gymadmin.repository.Dao;
  * @author mrodriguez
  */
 public interface CustomerDao extends Dao<Integer , CustomerEntity> {
-
-	public CustomerEntity findByName(String name);
 	
 	public List<CustomerEntity> findByFilters(Map<String , String> filters);
 }

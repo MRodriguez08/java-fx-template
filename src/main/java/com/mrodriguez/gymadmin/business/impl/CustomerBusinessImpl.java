@@ -58,10 +58,6 @@ public class CustomerBusinessImpl implements CustomerBusiness {
     	HibernateUtil.getSessionFactory().getCurrentSession().beginTransaction();
     	try {
     		
-    		CustomerEntity p = customerDao.findByName(d.getName());
-    		if (p != null)
-    			throw new BusinessException("Ya existe un plan con ese nombre");
-    		
     		d.setRegistrationDate(new Date());
     		customerDao.persist(d);    		
 		} catch (Exception e) {

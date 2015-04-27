@@ -34,7 +34,7 @@ public class MainWindow extends Application {
 
 		// --- Menu File
 		Menu menuFile = new Menu("File");
-		MenuItem menuExit = new MenuItem("Salir");
+		MenuItem menuExit = new MenuItem("Exit");
 		menuExit.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
@@ -44,15 +44,15 @@ public class MainWindow extends Application {
 		menuFile.getItems().add(menuExit);
 
 		// --- Menu Edit
-		Menu menuAdministration = new Menu("Administracion");
-		MenuItem itemPlans = new MenuItem("Planes");
+		Menu menuAdministration = new Menu("Administration");
+		MenuItem itemPlans = new MenuItem("Plans");
 		menuAdministration.getItems().add(itemPlans);
-		MenuItem itemCustomers = new MenuItem("Clientes");
+		MenuItem itemCustomers = new MenuItem("Customers");
 		menuAdministration.getItems().add(itemCustomers);
 
 		// --- Menu View
-		Menu menuHelp = new Menu("Ayuda");
-		MenuItem itemAbout = new MenuItem("Sobre GymAdmin...");
+		Menu menuHelp = new Menu("Help");
+		MenuItem itemAbout = new MenuItem("About JFX template...");
 		menuHelp.getItems().add(itemAbout);
 
 		menuBar.getMenus().addAll(menuFile, menuAdministration, menuHelp);
@@ -97,7 +97,7 @@ public class MainWindow extends Application {
 		Label generalLabel = new Label("General");		
 		sideMenu.getChildren().add(generalLabel);
 		
-		Hyperlink paymentsLink = new Hyperlink("Pagos");
+		Hyperlink paymentsLink = new Hyperlink("Payments");
 		paymentsLink.getStyleClass().add("side-menu-link");
 		paymentsLink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -108,10 +108,10 @@ public class MainWindow extends Application {
 		});
 		sideMenu.getChildren().add(paymentsLink);
 		
-		Label adminLabel = new Label("Administracion");		
+		Label adminLabel = new Label("Administration");		
 		sideMenu.getChildren().add(adminLabel);
 		
-		Hyperlink plansLink = new Hyperlink("Planes");		
+		Hyperlink plansLink = new Hyperlink("Plans");		
 		plansLink.getStyleClass().add("side-menu-link");
 		plansLink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -121,7 +121,7 @@ public class MainWindow extends Application {
 		});
 		sideMenu.getChildren().add(plansLink);
 		
-		Hyperlink paymentMethodLink = new Hyperlink("Metodos de pago");		
+		Hyperlink paymentMethodLink = new Hyperlink("Payment methods");		
 		paymentMethodLink.getStyleClass().add("side-menu-link");
 		paymentMethodLink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -132,7 +132,7 @@ public class MainWindow extends Application {
 		sideMenu.getChildren().add(paymentMethodLink);
 		
 		
-		Hyperlink customersLink = new Hyperlink("Clientes");
+		Hyperlink customersLink = new Hyperlink("Customers");
 		customersLink.getStyleClass().add("side-menu-link");
 		customersLink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
@@ -165,7 +165,7 @@ public class MainWindow extends Application {
 		HBox top = new HBox();
 		
 		top.getStyleClass().add("layout-top");
-		Label appNameLabel = new Label("Panther Gym");
+		Label appNameLabel = new Label("JFX Template");
 		top.getChildren().add(appNameLabel);
 		
 		return top;

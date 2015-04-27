@@ -188,17 +188,9 @@ public class Form extends ModalStage {
 					
 					if (inputName.getText().length() == 0){
 						inputName.getStyleClass().add("has-error");
-						throw new BusinessException("");
+						throw new BusinessException("The name is required");
 					} else {
 						inputName.getStyleClass().remove("has-error");
-					}
-					
-					String p = inputPlan.getSelectionModel().getSelectedItem();
-					if (p == null){
-						inputPlan.getStyleClass().add("has-error");
-						throw new BusinessException("");
-					} else {
-						inputPlan.getStyleClass().remove("has-error");
 					}
 					
 					CustomerBusiness customerBusiness = BusinessFactory.getCustomerBusiness();

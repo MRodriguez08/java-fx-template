@@ -63,7 +63,7 @@ public class Admin extends GridPane {
 		wrapper.setMinWidth(this.getWidth());
 		wrapper.getStyleClass().add("administration-pane-container");
 		
-		Label label = new Label("Gestion de clientes");
+		Label label = new Label("Customers administration");
 		label.getStyleClass().add("administration-title");
 		wrapper.getChildren().add(label);
 		
@@ -77,11 +77,11 @@ public class Admin extends GridPane {
 		HBox filtersPane = new HBox();
 		filtersPane.getStyleClass().add("administration-filter-pane");
 		
-		Label labelNameFilter = new Label("Nombre:");
+		Label labelNameFilter = new Label("Name:");
 		nameFilter = new TextField();
 		labelNameFilter.setLabelFor(nameFilter);
 		
-		Label labelDescriptionFilter = new Label("Apellido:");
+		Label labelDescriptionFilter = new Label("Surname:");
 		surnameFilter = new TextField();
 		labelDescriptionFilter.setLabelFor(surnameFilter);
 		
@@ -89,7 +89,7 @@ public class Admin extends GridPane {
 		emailFilter = new TextField();
 		labelEmailFilter.setLabelFor(emailFilter);
 		
-		Button filterButton = new Button("Filtrar");
+		Button filterButton = new Button("Filter");
 		filterButton.getStyleClass().add("administration-filter-button");
 		filterButton.setOnAction(new EventHandler<ActionEvent>() {			
 			@Override
@@ -113,7 +113,7 @@ public class Admin extends GridPane {
 		//create button
 		HBox createButtonPane = new HBox();
 		Button createButton = new Button("+");
-		createButton.setTooltip(new Tooltip("Crear nuevo cliente"));
+		createButton.setTooltip(new Tooltip("Create new customer"));
 		createButton.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 
 		    @Override
@@ -138,13 +138,13 @@ public class Admin extends GridPane {
 		idColumn.setCellValueFactory(new PropertyValueFactory<CustomerEntity, Integer>(
 						"id"));
 		
-		TableColumn nameColumn = new TableColumn("Nombre");
+		TableColumn nameColumn = new TableColumn("Name");
 		nameColumn.setMinWidth(200);
 		nameColumn.setMaxWidth(400);
 		nameColumn.setCellValueFactory(new PropertyValueFactory<CustomerEntity, String>(
 						"name"));
 		
-		TableColumn surnameColumn = new TableColumn("Apellido");
+		TableColumn surnameColumn = new TableColumn("Surname");
 		surnameColumn.setMinWidth(200);
 		surnameColumn.setCellValueFactory(new PropertyValueFactory<CustomerEntity, String>(
 						"surname"));
@@ -154,7 +154,7 @@ public class Admin extends GridPane {
 		emailColumn.setCellValueFactory(new PropertyValueFactory<CustomerEntity, String>(
 						"email"));
 		
-		TableColumn cellphoneColumn = new TableColumn("Celular");
+		TableColumn cellphoneColumn = new TableColumn("Cellphone");
 		cellphoneColumn.setMinWidth(200);
 		cellphoneColumn.setCellValueFactory(new PropertyValueFactory<CustomerEntity, String>(
 						"cellphone"));

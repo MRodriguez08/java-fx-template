@@ -19,12 +19,6 @@ public class CustomerDaoImpl extends DaoImpl<Integer , CustomerEntity> implement
     public CustomerDaoImpl(){
         super();
     }
-    
-    public CustomerEntity findByName(String name) {		
-		Query namedQuery = HibernateUtil.getSessionFactory().getCurrentSession().getNamedQuery("PlanEntity.findByName");
-		namedQuery.setParameter("name", name);
-		return (CustomerEntity)namedQuery.uniqueResult();		
-	}
 
 	@SuppressWarnings("unchecked")
 	public List<CustomerEntity> findByFilters(Map<String, String> filters) {		

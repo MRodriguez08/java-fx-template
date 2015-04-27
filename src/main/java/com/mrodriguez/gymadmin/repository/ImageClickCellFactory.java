@@ -1,5 +1,7 @@
 package com.mrodriguez.gymadmin.repository;
 
+import java.io.File;
+
 import com.mrodriguez.gymadmin.persistence.entities.BaseEntity;
 
 import javafx.event.Event;
@@ -53,7 +55,8 @@ public class ImageClickCellFactory implements Callback<TableColumn, TableCell> {
                             setGraphic(null);
 
                         } else {
-                            Image image = new Image( ((BaseEntity)item).getEditImage().getPath());
+                        	File i = (File)item;
+                            Image image = new Image("file:" + i.getPath()) ;
 
                             imageview.setImage(image);
                             setGraphic(vbox);
